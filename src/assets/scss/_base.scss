@@ -1,0 +1,53 @@
+// ---------------------------
+//
+// base.scss
+//
+// ---------------------------
+
+@include all {
+  html {
+    font-size: 62.5%; // Base Font Size 10px
+  }
+
+  body {
+    word-break: break-all;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    line-height: 1.6;
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    @include font-size(14);
+    color: #333;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: $color-base;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@include pc {
+  .pc-hide {
+    display: none !important;
+  }
+}
+
+@include sp {
+  .sp-hide {
+    display: none !important;
+  }
+}

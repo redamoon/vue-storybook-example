@@ -1,0 +1,31 @@
+$emBase: 16;
+$maxWidth: 1200; //px
+$pcBreakPoint: 812; //px
+
+// ブレイクポイント
+$emBase: 16;
+$breakpointsPC: (($pcBreakPoint / $emBase) * 1em);
+$breakpointsSP: ((($pcBreakPoint - 1) / $emBase) * 1em);
+
+@mixin all {
+@content;
+}
+
+@mixin pc {
+  @media print, screen and (min-width: #{$breakpointsPC}) {
+@content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: #{$breakpointsSP}) {
+@content;
+  }
+}
+
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}

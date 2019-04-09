@@ -2,9 +2,8 @@
   <button
     class="button"
     :class="[color, size]"
-    tag="button"
   >
-    <slot />
+    {{ name }}
   </button>
 </template>
 
@@ -13,7 +12,6 @@ export default {
   name: 'Button',
   props: {
     name: String,
-    path: String,
     size: String,
     color: String
   }

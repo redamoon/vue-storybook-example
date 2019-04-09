@@ -1,12 +1,11 @@
 <template>
-  <router-link
-    :to="path"
+  <button
     class="button"
     :class="[color, size]"
     tag="button"
   >
-    {{ name }}
-  </router-link>
+    <slot />
+  </button>
 </template>
 
 <script>
@@ -39,6 +38,9 @@ export default {
   }
   &.gray {
     background: #828384;
+  }
+  &.blue {
+    background: #3e61ff;
   }
 }
 </style>

@@ -6,3 +6,6 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+// addDecorator(withKnobs);
+// addDecorator(withInfo);

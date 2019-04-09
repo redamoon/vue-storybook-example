@@ -21,6 +21,25 @@ $black:   900;
 // color
 // ---------------------------
 $color-base: #333;
+$theme-colors: (
+  primary: #1C3043,
+  sub: #bccee3,
+  success: #0FDEBD,
+  error: #dc221a,
+  dark: #000,
+  base: #333
+);
+
+//a {
+//  background-color: map-get($theme-colors, 'primary');
+//  color: map-get($theme-colors, 'dark');
+//}
+
+:export {
+  @each $key, $color in $theme-colors {
+    #{$key}: $color;
+  }
+}
 
 // ---------------------------
 // mixin

@@ -52,6 +52,14 @@ storiesOf('Component/Buttons', module)
   })))
   .add('unique button', withNotes(NotesButton)(() => ({
     components: { Button },
+    computed: {
+      uniqueStyleObject() {
+        return {
+          'backgroundColor': this.uniqueColor,
+          'width': this.uniqueSize + 'px'
+        }
+      }
+    },
     props: {
       name: {
         default: text('Text', 'ユニークボタン', groupId01)
@@ -65,6 +73,6 @@ storiesOf('Component/Buttons', module)
     },
     template: `<Button
       :name="name"
-      :style="{backgroundColor: uniqueColor, width: uniqueSize + 'px'}"
+      :style="uniqueStyleObject"
     />`
   })))

@@ -1,4 +1,12 @@
-# vue-storybook
+# vue-storybook-example
+
+vue storybookのサンプルページ
+
+[https://redamoon.github.io/vue-storybook-example/](https://redamoon.github.io/vue-storybook-example/)
+
+## Storbook
+
+[https://redamoon.github.io/vue-storybook-example/storybook-build/](https://redamoon.github.io/vue-storybook-example/storybook-build/)
 
 ## Project setup
 ```

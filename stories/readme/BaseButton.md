@@ -1,4 +1,4 @@
-## ボタンの説明
+# BaseButton Document
 
 ```vue
 <Button

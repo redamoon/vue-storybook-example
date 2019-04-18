@@ -6,7 +6,7 @@ import { withNotes } from '@storybook/addon-notes'
 import Button from '../src/components/Button.vue'
 
 // ドキュメント
-import NotesButton from './readme/Button.md'
+import NotesButton from './readme/BaseButton.md'
 
 // button color / size / text / uniqueColor / uniqueSize
 const buttonColorLabel = 'Colors'
@@ -31,7 +31,7 @@ const groupId01 = 'button'
 storiesOf('Component/Buttons', module)
   .addDecorator(withKnobs)
   .addDecorator(withNotes)
-  .add('base button', withNotes(NotesButton)(() => ({
+  .add('base button', () => ({
     components: { Button },
     props: {
       name: {
@@ -49,8 +49,10 @@ storiesOf('Component/Buttons', module)
       :color="color"
       :size="size"
     />`
-  })))
-  .add('unique button', withNotes(NotesButton)(() => ({
+  }), {
+    notes: NotesButton
+  })
+  .add('unique button', () => ({
     components: { Button },
     computed: {
       uniqueStyleObject() {
@@ -75,4 +77,6 @@ storiesOf('Component/Buttons', module)
       :name="name"
       :style="uniqueStyleObject"
     />`
-  })))
+  }), {
+    notes: NotesButton
+  })

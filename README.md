@@ -13,6 +13,12 @@ vue storybookのサンプルページ
 yarn install
 ```
 
+### Storybook Start
+
+```
+yarn storybook
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn run serve

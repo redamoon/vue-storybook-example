@@ -1,11 +1,5 @@
 <template>
-  <div class="home">
-    <Button
-      name="グレーボタン"
-      path="/about"
-      size="wide"
-      color="gray"
-    />
+  <div>
     <Button
       name="モーダルボタン"
       size="wide"
@@ -13,8 +7,8 @@
       @event="openModal"
     />
     <Modal
-      title="モーダルのタイトル"
-      text="モーダルコンテンツの中身モーダルコンテンツの中身モーダルコンテンツの中身モーダルコンテンツの中身モーダルコンテンツの中身"
+      :title="name"
+      :text="body"
       :modalActive="isModalActive"
       :show="isShow"
     >
@@ -30,17 +24,19 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Button from '@/components/Button.vue'
 import Modal from '@/components/Modal.vue'
 import Overlay from '@/components/Overlay.vue'
-
 export default {
-  name: 'home',
+  name: 'BaseModal',
   components: {
     Button,
     Modal,
     Overlay
+  },
+  props: {
+    name: String,
+    body: String
   },
   methods: {
     openModal () {

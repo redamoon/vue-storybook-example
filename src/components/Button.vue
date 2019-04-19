@@ -36,6 +36,7 @@ export default {
   border-radius: 10px;
   border: 0;
   width: 200px;
+  cursor: pointer;
   &.wide {
     width: 100%;
   }

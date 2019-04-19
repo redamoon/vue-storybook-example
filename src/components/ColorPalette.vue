@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import variables from '../../src/assets/scss/setting/_variable.scss'
+import variables from '@/assets/scss/setting/_variable.scss'
 export default {
   name: 'ColorPalette',
   data () {

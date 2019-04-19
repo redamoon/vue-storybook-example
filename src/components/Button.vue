@@ -2,6 +2,7 @@
   <button
     class="button"
     :class="[color, size]"
+    @click="clickHandler"
   >
     {{ name }}
   </button>
@@ -13,7 +14,17 @@ export default {
   props: {
     name: String,
     size: String,
-    color: String
+    color: String,
+    disabled: Boolean
+  },
+  methods: {
+    /**
+     * 親にクリックイベントを渡す
+     * @param e {Object} event object
+     */
+    clickHandler () {
+      this.$emit('event')
+    }
   }
 }
 </script>
